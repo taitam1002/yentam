@@ -235,7 +235,7 @@ export default function MenuSection() {
             {combos.map((combo, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl border-2 border-accent/30 p-6 relative hover:border-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-scale-in flex flex-col h-full"
+                className="bg-card rounded-xl border-2 border-accent/30 p-6 relative hover:border-accent active:border-accent shadow-lg hover:shadow-xl active:shadow-xl transition-all duration-300 transform hover:-translate-y-2 active:-translate-y-2 animate-scale-in flex flex-col h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {combo.hot && (
@@ -270,7 +270,7 @@ export default function MenuSection() {
                   )}
                   <button
                     onClick={() => setContactDialogOpen(true)}
-                    className="w-full px-4 py-3 bg-primary text-card font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-accent/30"
+                    className="w-full px-4 py-3 bg-primary text-card font-semibold rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 transform hover:scale-105 active:scale-105 hover:shadow-lg active:shadow-lg hover:shadow-accent/30 active:shadow-accent/30"
                   >
                     Liên hệ ngay
                   </button>

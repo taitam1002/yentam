@@ -36,15 +36,15 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-8 pt-6 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-              <div className="group hover:scale-110 transition-transform duration-300">
+              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
                 <p className="text-3xl font-bold text-accent">100%</p>
                 <p className="text-sm text-foreground/70">Tự nhiên</p>
               </div>
-              <div className="group hover:scale-110 transition-transform duration-300">
+              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
                 <p className="text-3xl font-bold text-accent">2+</p>
                 <p className="text-sm text-foreground/70">Năm kinh nghiệm</p>
               </div>
-              <div className="group hover:scale-110 transition-transform duration-300">
+              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
                 <p className="text-3xl font-bold text-accent">200+</p>
                 <p className="text-sm text-foreground/70">Khách hàng hài lòng</p>
               </div>
@@ -55,11 +55,11 @@ export default function Hero() {
           <div className="relative flex justify-center items-center animate-slide-right">
             <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent/50 blur-2xl animate-pulse-glow"></div>
-              <div className="absolute inset-0 rounded-full bg-card flex items-center justify-center overflow-hidden shadow-2xl border-4 border-accent/30 hover:border-accent/60 transition-all duration-300">
+              <div className="absolute inset-0 rounded-full bg-card flex items-center justify-center overflow-hidden shadow-2xl border-4 border-accent/30 hover:border-accent/60 active:border-accent/60 transition-all duration-300">
                 <img
                   src="/IMG_6388 copy.jpg"
                   alt="Yến sào Yến Tâm"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover hover:scale-110 active:scale-110 transition-transform duration-300"
                 />
               </div>
             </div>

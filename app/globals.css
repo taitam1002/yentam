@@ -5,14 +5,14 @@
 
 :root {
   /* Light mode - light background */
-  --background: #f5f5f5;
+  --background: #f0f0f0;
   --foreground: #1a1a1a;
-  --card: #ffffff;
+  --card: #fafafa;
   --card-foreground: #1a1a1a;
-  --popover: #ffffff;
+  --popover: #fafafa;
   --popover-foreground: #1a1a1a;
   --primary: #1b6b5e;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #fafafa;
   --secondary: #f59e0b;
   --secondary-foreground: #1a1a1a;
   --muted: #c8bfb0;
@@ -20,9 +20,9 @@
   --accent: #d4a574;
   --accent-foreground: #1a1a1a;
   --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
+  --destructive-foreground: #fafafa;
   --border: #e8ddd0;
-  --input: #ffffff;
+  --input: #fafafa;
   --ring: #d4a574;
   --chart-1: #1b6b5e;
   --chart-2: #d4a574;
@@ -31,48 +31,48 @@
   --chart-5: #c8bfb0;
   --radius: 0.625rem;
   --sidebar: #0d5d54;
-  --sidebar-foreground: #ffffff;
+  --sidebar-foreground: #fafafa;
   --sidebar-primary: #1b6b5e;
-  --sidebar-primary-foreground: #ffffff;
+  --sidebar-primary-foreground: #fafafa;
   --sidebar-accent: #d4a574;
   --sidebar-accent-foreground: #1a1a1a;
   --sidebar-border: #0d5d54;
   --sidebar-ring: #d4a574;
 }
 
-/* Dark mode theme with teal background */
+/* Dark mode theme with black background */
 .dark {
-  --background: #0a4a42;
+  --background: #000000;
   --foreground: #f5f5f5;
-  --card: #ffffff;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
+  --card: #1a1a1a;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1a1a;
+  --popover-foreground: #f5f5f5;
   --primary: #1b6b5e;
   --primary-foreground: #ffffff;
   --secondary: #f59e0b;
   --secondary-foreground: #ffffff;
-  --muted: #c8bfb0;
+  --muted: #2a2a2a;
   --muted-foreground: #a0a0a0;
   --accent: #d4a574;
-  --accent-foreground: #0a4a42;
+  --accent-foreground: #000000;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #1b6b5e;
-  --input: #ffffff;
+  --border: #404040;
+  --input: #1a1a1a;
   --ring: #d4a574;
   --chart-1: #d4a574;
   --chart-2: #f59e0b;
   --chart-3: #1b6b5e;
   --chart-4: #0d5d54;
   --chart-5: #c8bfb0;
-  --sidebar: #0d5d54;
+  --sidebar: #0d0d0d;
   --sidebar-foreground: #f5f5f5;
   --sidebar-primary: #1b6b5e;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #d4a574;
-  --sidebar-accent-foreground: #0a4a42;
-  --sidebar-border: #1b6b5e;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #404040;
   --sidebar-ring: #d4a574;
 }
 
@@ -122,6 +122,15 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Dark mode border adjustments for better consistency */
+.dark [class*="border-accent/20"] {
+  border-color: rgba(64, 64, 64, 0.8) !important;
+}
+
+.dark [class*="border-accent/30"] {
+  border-color: rgba(64, 64, 64, 1) !important;
 }
 
 /* Thêm animations mới mẻ và hiệu ứng */

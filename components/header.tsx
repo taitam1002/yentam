@@ -3,14 +3,15 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-accent/20 z-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b-2 border-accent/20 z-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -26,11 +27,11 @@ export default function Header() {
                 className="drop-shadow-lg object-contain"
               />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-accent font-bold text-lg hover:text-foreground transition-colors duration-300">
+            <div className="block">
+              <h1 className="text-accent font-bold text-sm sm:text-lg hover:text-foreground transition-colors duration-300">
                 Yến Tâm
               </h1>
-              <p className="text-xs text-foreground/60">Toàn tâm vì yến</p>
+              <p className="text-[10px] sm:text-xs text-foreground/60">Toàn tâm vì yến</p>
             </div>
           </Link>
 
@@ -64,22 +65,19 @@ export default function Header() {
               Video
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <a
-              href="tel:0795099393"
-              className="flex items-center gap-2 px-4 py-2 bg-accent text-primary rounded-lg hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 font-medium transform hover:scale-105 hover:-translate-y-1"
-            >
-              <Phone className="w-4 h-4" />
-              079.509.9393
-            </a>
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-accent/20 rounded-lg transition-colors duration-300"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-accent" /> : <Menu className="w-6 h-6 text-accent" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 hover:bg-accent/20 rounded-lg transition-colors duration-300"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6 text-accent" /> : <Menu className="w-6 h-6 text-accent" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -109,13 +107,6 @@ export default function Header() {
             >
               Video
             </Link>
-            <a
-              href="tel:0795099393"
-              className="flex items-center gap-2 px-4 py-2 bg-accent text-primary rounded-lg font-medium mx-4 mt-4 hover:bg-accent/90 transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="w-4 h-4" />
-              079.509.9393
-            </a>
           </nav>
         )}
       </div>

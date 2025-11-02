@@ -2,9 +2,11 @@
 
 /// <reference types="react" />
 
+import { useState } from "react"
 import SparkleBackground from "@/components/sparkle-background"
 
 export default function BenefitsSection() {
+  const [touchedItems, setTouchedItems] = useState<Set<number>>(new Set())
   const benefits = [
     {
       icon: "💪",
@@ -54,10 +56,16 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group bg-card p-8 rounded-xl border-2 border-accent/30 hover:border-accent shadow-md hover:shadow-xl hover:shadow-accent/20 transition-all duration-500 text-center space-y-4 cursor-pointer transform hover:-translate-y-2 animate-scale-in h-full flex flex-col justify-between"
+              className={`group bg-card p-8 rounded-xl border-2 border-accent/30 hover:border-accent active:border-accent shadow-md hover:shadow-xl active:shadow-xl hover:shadow-accent/20 active:shadow-accent/20 transition-all duration-500 text-center space-y-4 cursor-pointer transform hover:-translate-y-2 active:-translate-y-2 animate-scale-in h-full flex flex-col justify-between ${touchedItems.has(index) ? 'scale-[1.02]' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
+              onTouchStart={() => setTouchedItems(prev => new Set(prev).add(index))}
+              onTouchEnd={() => setTouchedItems(prev => {
+                const newSet = new Set(prev)
+                newSet.delete(index)
+                return newSet
+              })}
             >
-              <div className="text-5xl group-hover:scale-125 transition-transform duration-300">{benefit.icon}</div>
+              <div className={`text-5xl group-hover:scale-125 transition-transform duration-300 ${touchedItems.has(index) ? 'scale-125' : ''}`}>{benefit.icon}</div>
               <h3 className="text-lg font-bold text-primary group-hover:text-accent transition-colors duration-300">
                 {benefit.title}
               </h3>

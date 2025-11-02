@@ -15,7 +15,7 @@ interface ContactDialogProps {
 }
 
 export default function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
-  const phoneNumber = "0795099393"
+  const phoneNumber = "0938697977"
   const facebookUrl = "https://www.facebook.com/profile.php?id=100069772802576"
 
   return (

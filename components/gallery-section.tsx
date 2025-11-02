@@ -6,33 +6,34 @@ import ContactDialog from "@/components/contact-dialog"
 
 export default function GallerySection() {
   const [contactDialogOpen, setContactDialogOpen] = useState(false)
+  const [touchedItems, setTouchedItems] = useState<Set<number>>(new Set())
   const products = [
     {
       id: 1,
       title: "Tinh Chế - Loại 1",
       description: "Gồm những sợi yến dài, trắng ngần, được tuyển chọn tỉ mỉ để giữ trọn độ tinh khiết và giá trị dinh dưỡng cao.",
-      image: "/IMG_6388 copy.jpg",
+      image: "/toyen.png",
       price: "2.300.000₫",
     },
     {
       id: 2,
       title: "Tinh Chế - Loại 2",
       description: "Kết hợp giữa sợi yến nguyên và sợi vụn, hài hòa giữa chất lượng và giá trị, vẫn đảm bảo dưỡng chất dồi dào và hương vị tự nhiên.",
-      image: "/IMG_6388 copy.jpg",
+      image: "/toyen.png",
       price: "2.000.000₫",
     },
     {
       id: 3,
       title: "Tinh Chế - Loại 3",
       description: "Từ những sợi yến vụn tự nhiên, vẫn giữ nguyên độ thơm ngon, thích hợp để chưng sẵn, nấu cháo hay làm yến tươi tiện lợi.",
-      image: "/IMG_6388 copy.jpg",
+      image: "/toyen.png",
       price: "1.800.000₫",
     },
     {
       id: 4,
       title: "Tổ Thô",
       description: "Tổ yến nguyên bản chưa tinh chế, giữ trọn hương vị tự nhiên và dinh dưỡng tinh túy từ thiên nhiên",
-      image: "/IMG_6388 copy.jpg",
+      image: "/Screenshot 2025-11-02 213120.png",
       price: "1.300.000₫",
     },
   ]
@@ -63,14 +64,20 @@ export default function GallerySection() {
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="group bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 border-2 border-accent/30 transform hover:-translate-y-2 animate-slide-up cursor-pointer flex flex-col h-full"
+              className={`group bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl active:shadow-2xl hover:shadow-accent/20 active:shadow-accent/20 transition-all duration-500 border-2 border-accent/30 transform hover:-translate-y-2 active:-translate-y-2 animate-slide-up cursor-pointer flex flex-col h-full ${touchedItems.has(product.id) ? 'scale-[1.02]' : ''}`}
               style={{ animationDelay: `${index * 0.15}s` }}
+              onTouchStart={() => setTouchedItems(prev => new Set(prev).add(product.id))}
+              onTouchEnd={() => setTouchedItems(prev => {
+                const newSet = new Set(prev)
+                newSet.delete(product.id)
+                return newSet
+              })}
             >
               <div className="relative h-64 overflow-hidden bg-primary/5">
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500"
+                  className={`w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ${touchedItems.has(product.id) ? 'scale-125' : ''}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -87,7 +94,7 @@ export default function GallerySection() {
                   <p className="text-2xl font-bold text-accent mb-4">{product.price}</p>
                   <button
                     onClick={() => setContactDialogOpen(true)}
-                    className="w-full px-4 py-3 bg-primary text-card font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-accent/30"
+                    className="w-full px-4 py-3 bg-primary text-card font-semibold rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 transform hover:scale-105 active:scale-105 hover:shadow-lg active:shadow-lg hover:shadow-accent/30 active:shadow-accent/30"
                   >
                     Liên hệ ngay
                   </button>
