@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "passwordProtection": {
+    "enabled": true,
+    "password": "yentam2025"
+  }
+}
+
