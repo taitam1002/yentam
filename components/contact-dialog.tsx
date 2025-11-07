@@ -22,7 +22,7 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-accent text-center">
+          <DialogTitle className="text-2xl font-bold text-primary dark:text-accent text-center">
             Liên hệ với chúng tôi
           </DialogTitle>
           <DialogDescription className="text-center text-foreground/70">
@@ -31,17 +31,19 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
         </DialogHeader>
 
         <div className="space-y-4 mt-6">
-          {/* Phone */}
+          {/* Facebook */}
           <a
-            href={`tel:${phoneNumber}`}
-            className="flex items-center gap-4 p-4 bg-primary text-card rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            href={facebookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground rounded-xl hover:from-primary/90 hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-primary/30"
           >
-            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <Phone className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <Facebook className="w-6 h-6 text-primary-foreground" />
             </div>
             <div className="flex-1">
-              <p className="text-sm text-card/80">Gọi điện</p>
-              <p className="font-bold text-lg">{phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "$1.$2.$3")}</p>
+              <p className="text-sm text-primary-foreground/80">Facebook</p>
+              <p className="font-bold text-lg text-primary-foreground">Yến Tâm</p>
             </div>
           </a>
 
@@ -50,30 +52,28 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
             href={`https://zalo.me/${phoneNumber}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 bg-accent text-primary rounded-lg hover:bg-accent/90 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground rounded-xl hover:from-primary/90 hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-primary/30"
           >
-            <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <MessageCircle className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <MessageCircle className="w-6 h-6 text-primary-foreground" />
             </div>
             <div className="flex-1">
-              <p className="text-sm text-primary/80">Nhắn tin Zalo</p>
-              <p className="font-bold text-lg">{phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "$1.$2.$3")}</p>
+              <p className="text-sm text-primary-foreground/80">Nhắn tin Zalo</p>
+              <p className="font-bold text-lg text-primary-foreground">{phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "$1.$2.$3")}</p>
             </div>
           </a>
 
-          {/* Facebook */}
+          {/* Phone */}
           <a
-            href={facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            href={`tel:${phoneNumber}`}
+            className="flex items-center gap-4 p-4 bg-gradient-to-r from-accent to-accent/90 text-primary rounded-xl hover:from-accent/90 hover:to-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-accent/30"
           >
-            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-              <Facebook className="w-6 h-6" />
+            <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <Phone className="w-6 h-6 text-primary" />
             </div>
             <div className="flex-1">
-              <p className="text-sm text-white/80">Facebook</p>
-              <p className="font-bold text-lg">Yến Tâm</p>
+              <p className="text-sm text-primary/80">Gọi điện</p>
+              <p className="font-bold text-lg text-primary">{phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "$1.$2.$3")}</p>
             </div>
           </a>
         </div>

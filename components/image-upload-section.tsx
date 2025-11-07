@@ -44,7 +44,7 @@ export default function ImageUploadSection({ images, setImages }: ImageUploadSec
       <SparkleBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Thư Viện Ảnh</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-accent mb-4">Thư Viện Ảnh</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Xem hình ảnh sản phẩm, quá trình chế biến và những sản phẩm đã bán
           </p>
@@ -52,7 +52,7 @@ export default function ImageUploadSection({ images, setImages }: ImageUploadSec
 
         {/* Upload Section */}
         <div className="bg-card border-2 border-dashed border-primary/30 rounded-xl p-8 mb-12">
-          <h3 className="text-xl font-bold text-primary mb-6">Thêm Hình Ảnh Mới</h3>
+          <h3 className="text-xl font-bold text-primary dark:text-accent mb-6">Thêm Hình Ảnh Mới</h3>
 
           <div className="space-y-4">
             {/* File Upload */}

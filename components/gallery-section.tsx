@@ -39,24 +39,26 @@ export default function GallerySection() {
   ]
 
   return (
-    <section id="gallery" className="py-20 bg-background relative overflow-hidden">
+    <section id="gallery" className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "0s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,165,116,0.05),transparent_70%)]"></div>
       </div>
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-accent mb-4">Dòng Sản Phẩm</h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Khám phá bộ sưu tập yến sào đa dạng, phù hợp với nhu cầu và ngân sách của bạn
+        <div className="text-center mb-20 animate-slide-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            Bộ Sưu Tập
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
+            Dòng Sản Phẩm
+          </h2>
+          <p className="text-lg md:text-xl text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Khám phá bộ sưu tập yến sào đa dạng, được tuyển chọn kỹ lưỡng từ những tổ yến chất lượng cao nhất, 
+            phù hợp với mọi nhu cầu và ngân sách của bạn.
           </p>
         </div>
 
@@ -64,7 +66,7 @@ export default function GallerySection() {
           {products.map((product, index) => (
             <div
               key={product.id}
-              className={`group bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl active:shadow-2xl hover:shadow-accent/20 active:shadow-accent/20 transition-all duration-500 border-2 border-accent/30 transform hover:-translate-y-2 active:-translate-y-2 animate-slide-up cursor-pointer flex flex-col h-full ${touchedItems.has(product.id) ? 'scale-[1.02]' : ''}`}
+              className={`group relative overflow-hidden rounded-3xl border-2 border-accent/30 dark:border-accent/20 bg-gradient-to-br from-card/80 via-card/60 to-background/40 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-2 animate-scale-in cursor-pointer flex flex-col h-full ${touchedItems.has(product.id) ? 'scale-[1.02] shadow-2xl shadow-accent/20' : ''}`}
               style={{ animationDelay: `${index * 0.15}s` }}
               onTouchStart={() => setTouchedItems(prev => new Set(prev).add(product.id))}
               onTouchEnd={() => setTouchedItems(prev => {
@@ -73,30 +75,48 @@ export default function GallerySection() {
                 return newSet
               })}
             >
-              <div className="relative h-64 overflow-hidden bg-primary/5">
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+              {/* Image Container */}
+              <div className="relative h-72 overflow-hidden bg-gradient-to-br from-primary/10 via-accent/5 to-transparent">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent z-10"></div>
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className={`w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ${touchedItems.has(product.id) ? 'scale-125' : ''}`}
+                  className={`w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-110 ${touchedItems.has(product.id) ? 'scale-110' : ''}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300 mb-3">
-                  {product.title}
-                </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300 flex-grow mb-4">
-                  {product.description}
-                </p>
+              {/* Content */}
+              <div className="relative p-6 md:p-8 flex flex-col flex-grow">
+                <div className="mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary dark:text-accent group-hover:text-accent transition-colors duration-300 mb-3">
+                    {product.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-foreground/80 dark:text-foreground/70 leading-relaxed group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                    {product.description}
+                  </p>
+                </div>
 
-                <div className="pt-4 border-t border-accent/20 mt-auto">
-                  <p className="text-2xl font-bold text-accent mb-4">{product.price}</p>
+                <div className="mt-auto pt-6 border-t border-accent/20 dark:border-accent/10">
+                  <div className="flex items-baseline justify-between mb-6">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.25em] text-foreground/50 dark:text-foreground/60 mb-1">Giá</p>
+                      <p className="text-2xl md:text-3xl font-bold text-accent">{product.price}</p>
+                    </div>
+                  </div>
+                  
                   <button
                     onClick={() => setContactDialogOpen(true)}
-                    className="w-full px-4 py-3 bg-primary text-card font-semibold rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 transform hover:scale-105 active:scale-105 hover:shadow-lg active:shadow-lg hover:shadow-accent/30 active:shadow-accent/30"
+                    className="group/btn relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-primary to-primary/90 px-6 py-4 font-semibold text-primary-foreground transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30"
                   >
-                    Liên hệ ngay
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      <span>Liên hệ ngay</span>
+                      <span className="transition-transform duration-500 group-hover/btn:translate-x-1">→</span>
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></div>
                   </button>
                 </div>
               </div>

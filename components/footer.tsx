@@ -63,7 +63,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-foreground/80 hover:text-accent transition">
                 <Mail className="w-3.5 h-3.5 flex-shrink-0" />
-                <a href="mailto:info@yentam.com">info@yentam.com</a>
+                <a href="mailto:info@yentam.com">cus.yentam@gmail.com
+                </a>
               </li>
               <li className="flex items-start gap-2 text-foreground/80">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />

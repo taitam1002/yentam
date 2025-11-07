@@ -28,7 +28,7 @@ export default function Header() {
               />
             </div>
             <div className="block">
-              <h1 className="text-accent font-bold text-sm sm:text-lg hover:text-foreground transition-colors duration-300">
+              <h1 className="text-primary dark:text-accent font-bold text-sm sm:text-lg hover:text-foreground transition-colors duration-300">
                 Yến Tâm
               </h1>
               <p className="text-[10px] sm:text-xs text-foreground/60">Toàn tâm vì yến</p>
@@ -38,28 +38,28 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="#benefits"
+              href="/benefits"
               className="text-foreground hover:text-accent font-medium transition-colors duration-300 relative group"
             >
               Lợi ích
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
-              href="#menu"
+              href="/menu"
               className="text-foreground hover:text-accent font-medium transition-colors duration-300 relative group"
             >
               Menu
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
-              href="#gallery"
+              href="/products"
               className="text-foreground hover:text-accent font-medium transition-colors duration-300 relative group"
             >
               Dòng sản phẩm
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
-              href="#videos"
+              href="/videos"
               className="text-foreground hover:text-accent font-medium transition-colors duration-300 relative group"
             >
               Video
@@ -84,25 +84,25 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden pb-4 space-y-2 animate-slide-up">
             <Link
-              href="#benefits"
+              href="/benefits"
               className="block px-4 py-2 hover:bg-accent/10 rounded-lg font-medium text-foreground hover:text-accent transition-colors duration-300"
             >
               Lợi ích
             </Link>
             <Link
-              href="#menu"
+              href="/menu"
               className="block px-4 py-2 hover:bg-accent/10 rounded-lg font-medium text-foreground hover:text-accent transition-colors duration-300"
             >
               Menu
             </Link>
             <Link
-              href="#gallery"
+              href="/products"
               className="block px-4 py-2 hover:bg-accent/10 rounded-lg font-medium text-foreground hover:text-accent transition-colors duration-300"
             >
               Dòng sản phẩm
             </Link>
             <Link
-              href="#videos"
+              href="/videos"
               className="block px-4 py-2 hover:bg-accent/10 rounded-lg font-medium text-foreground hover:text-accent transition-colors duration-300"
             >
               Video

@@ -114,8 +114,12 @@ export default function MenuSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-accent mb-4">Yến Chưng Tươi</h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            Thực Đơn
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-4">Yến Chưng Tươi</h2>
+          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto">
             Vị ngon từ thiên nhiên, sức khỏe cho gia đình bạn
           </p>
         </div>
@@ -123,7 +127,7 @@ export default function MenuSection() {
         <div className="grid lg:grid-cols-2 gap-8 mb-12 items-start">
           {/* Yến Chưng Bồi Bổ */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-primary dark:text-accent mb-6 flex items-center gap-3">
               <span className="w-1 h-8 bg-accent rounded"></span>
               Yến Chưng Bồi Bổ
             </h3>
@@ -144,9 +148,9 @@ export default function MenuSection() {
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-bold text-lg text-primary mb-1">{product.title}</h4>
-                    <p className="text-sm text-foreground/70 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80">{product.description}</p>
+                    <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
+                    <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
+                    <p className="text-sm text-foreground/80 dark:text-foreground/70">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
@@ -155,7 +159,7 @@ export default function MenuSection() {
                       key={optIndex}
                       className="flex justify-between items-center p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
                     >
-                      <span className="text-sm text-foreground/90 flex-1">{option.name}</span>
+                      <span className="text-sm text-foreground/80 dark:text-foreground/90 flex-1">{option.name}</span>
                       <span className="font-bold text-accent ml-4">{option.price}</span>
                     </div>
                   ))}
@@ -166,7 +170,7 @@ export default function MenuSection() {
 
           {/* Yến Chưng Đặc Biệt */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-primary dark:text-accent mb-6 flex items-center gap-3">
               <span className="w-1 h-8 bg-accent rounded"></span>
               Yến Chưng Đặc Biệt
             </h3>
@@ -187,9 +191,9 @@ export default function MenuSection() {
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-bold text-lg text-primary mb-1">{product.title}</h4>
-                    <p className="text-sm text-foreground/70 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80">{product.description}</p>
+                    <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
+                    <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
+                    <p className="text-sm text-foreground/80 dark:text-foreground/70">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
@@ -198,7 +202,7 @@ export default function MenuSection() {
                       key={optIndex}
                       className="flex justify-between items-center p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
                     >
-                      <span className="text-sm text-foreground/90 flex-1">{option.name}</span>
+                      <span className="text-sm text-foreground/80 dark:text-foreground/90 flex-1">{option.name}</span>
                       <span className="font-bold text-accent ml-4">{option.price}</span>
                     </div>
                   ))}
@@ -208,7 +212,7 @@ export default function MenuSection() {
 
             {/* Các Vị Chưng Kèm */}
             <div className="bg-card rounded-xl border-2 border-accent/30 p-6 mt-6">
-              <h4 className="font-bold text-lg text-primary mb-4">Các Vị Chưng Kèm</h4>
+              <h4 className="font-bold text-lg text-primary dark:text-accent mb-4">Các Vị Chưng Kèm</h4>
               <div className="flex flex-wrap gap-2">
                 {flavors.map((flavor, index) => (
                   <Badge
@@ -226,7 +230,7 @@ export default function MenuSection() {
 
         {/* Combo Section */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-primary mb-8 text-center flex items-center justify-center gap-3">
+          <h3 className="text-2xl font-bold text-primary dark:text-accent mb-8 text-center flex items-center justify-center gap-3">
             <span className="w-1 h-8 bg-accent rounded"></span>
             Combo Tiết Kiệm & Tối Ưu
             <span className="w-1 h-8 bg-accent rounded"></span>
@@ -245,19 +249,19 @@ export default function MenuSection() {
                     </Badge>
                   </div>
                 )}
-                <h4 className="font-bold text-lg text-primary mb-4">{combo.title}</h4>
+                <h4 className="font-bold text-lg text-primary dark:text-accent mb-4">{combo.title}</h4>
                 {combo.title === "Combo Dùng Trong Tuần" ? (
-                  <p className="text-sm text-foreground/70 mb-4 leading-relaxed flex-grow">
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed flex-grow">
                     Mua 10 hũ Yến chưng Bồi bổ Hằng ngày (75ml),{" "}
                     <span className="font-bold text-accent text-base">tặng 1 hũ cùng loại</span> 
                   </p>
                 ) : (
-                  <p className="text-sm text-foreground/70 mb-4 leading-relaxed flex-grow">{combo.content}</p>
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed flex-grow">{combo.content}</p>
                 )}
                 <div className="pt-4 border-t border-accent/20 mt-auto">
                   {combo.originalPrice ? (
                     <>
-                      <p className="text-sm text-foreground/50 line-through mb-2">
+                      <p className="text-sm text-foreground/60 dark:text-foreground/50 line-through mb-2">
                         Giá gốc: {combo.originalPrice}
                       </p>
                       <p className="text-2xl font-bold text-accent mb-4">{combo.price}</p>

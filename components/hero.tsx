@@ -4,7 +4,7 @@ import SparkleBackground from "@/components/sparkle-background"
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-background via-background to-card/30 relative overflow-hidden">
+    <section className="pt-32 pb-20 bg-gradient-to-br from-background via-background to-card/30 relative overflow-hidden min-h-[90vh] flex items-center">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
         <div
@@ -14,40 +14,41 @@ export default function Hero() {
       </div>
       <SparkleBackground />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center min-h-[500px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 animate-slide-left flex flex-col justify-center">
-            <div className="space-y-3">
-              <p className="text-accent font-semibold text-lg animate-fade-in">Chào mừng đến với</p>
+          <div className="space-y-8 animate-slide-left flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur animate-fade-in">
+              <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+              Câu Chuyện Bắt Đầu
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-primary dark:text-accent font-semibold text-lg animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                Chào mừng đến với
+              </p>
               <h1
-                className="text-5xl md:text-6xl font-bold text-accent text-balance animate-slide-up"
+                className="text-5xl md:text-6xl font-bold text-primary dark:text-accent text-balance animate-slide-up leading-tight"
                 style={{ animationDelay: "0.2s" }}
               >
                 Yến Tâm
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground text-balance">Yến Sào Cao Cấp</h2>
-              <p
-                className="text-lg text-foreground/80 text-balance leading-relaxed animate-fade-in"
-                style={{ animationDelay: "0.4s" }}
-              >
-               Yến sào 100% nguyên chất từ Bình Phước, được tuyển chọn tinh túy và chế biến theo quy trình chuẩn mực, mang đến chất lượng thuần khiết và giá trị dinh dưỡng vượt trội.
-              </p>
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground text-balance animate-slide-up" style={{ animationDelay: "0.3s" }}>
+                Yến Sào Cao Cấp
+              </h2>
             </div>
 
-            <div className="flex gap-8 pt-6 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
-                <p className="text-3xl font-bold text-accent">100%</p>
-                <p className="text-sm text-foreground/70">Tự nhiên</p>
-              </div>
-              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
-                <p className="text-3xl font-bold text-accent">2+</p>
-                <p className="text-sm text-foreground/70">Năm kinh nghiệm</p>
-              </div>
-              <div className="group hover:scale-110 active:scale-110 transition-transform duration-300">
-                <p className="text-3xl font-bold text-accent">200+</p>
-                <p className="text-sm text-foreground/70">Khách hàng hài lòng</p>
-              </div>
+            <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <p className="text-lg text-foreground/90 dark:text-foreground/80 text-balance leading-relaxed">
+                Trong hành trình tìm kiếm những giá trị thuần khiết từ thiên nhiên, 
+                chúng tôi đã khám phá ra vẻ đẹp và sức mạnh của yến sào - món quà quý giá 
+                mà thiên nhiên ban tặng.
+              </p>
+              <p className="text-base text-foreground/80 dark:text-foreground/70 leading-relaxed">
+                Từ những hang đá tự nhiên tại <span className="font-semibold text-primary dark:text-accent">Bình Phước</span>, 
+                đến bàn tay bạn, mỗi sợi yến đều mang trong mình một câu chuyện về sự tận tâm, 
+                chất lượng và niềm tin.
+              </p>
             </div>
           </div>
 
