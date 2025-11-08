@@ -38,7 +38,7 @@ export default function CommitmentStory() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
             Lời Hứa Của Chúng Tôi
           </h2>
-          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed text-justify">
             Mỗi sản phẩm Yến Tâm là kết quả của sự kết hợp giữa thiên nhiên thuần khiết, 
             quy trình chế biến chuẩn mực và tâm huyết phục vụ khách hàng.
           </p>
@@ -61,7 +61,7 @@ export default function CommitmentStory() {
                   <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
                     {item.label}
                   </h3>
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function CommitmentStory() {
             <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-accent">
               Sẵn Sàng Trải Nghiệm Yến Tâm?
             </h3>
-            <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto leading-relaxed text-justify">
               Khám phá bộ sưu tập yến sào cao cấp của chúng tôi và cảm nhận sự khác biệt 
               từ những sản phẩm được chọn lọc kỹ lưỡng.
             </p>

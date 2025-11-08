@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import SparkleBackground from "@/components/sparkle-background"
 
 const processSteps = [
@@ -7,25 +8,25 @@ const processSteps = [
     step: "01",
     title: "Thu Hoạch Thủ Công",
     description: "Mỗi tổ yến được thu hoạch cẩn thận bằng tay, đảm bảo không làm tổn hại đến cấu trúc tự nhiên và giá trị dinh dưỡng.",
-    icon: "✋",
+    image: "/ntcb_1.png",
   },
   {
     step: "02",
     title: "Tuyển Chọn Tinh Túy",
     description: "Chỉ những tổ yến đạt tiêu chuẩn cao nhất mới được chọn lọc, loại bỏ hoàn toàn tạp chất và đảm bảo độ tinh khiết.",
-    icon: "🔍",
+    image: "/ntcb_2.png",
   },
   {
     step: "03",
     title: "Chế Biến Tận Tâm",
     description: "Mỗi sợi yến được chế biến thủ công tại nhà với sự tỉ mỉ, giữ nguyên hương vị và dưỡng chất tự nhiên. Quy trình đơn giản nhưng cẩn thận, đảm bảo an toàn vệ sinh thực phẩm.",
-    icon: "⚙️",
+    image: "/ntcb_3.png",
   },
   {
     step: "04",
     title: "Đóng Gói Cẩn Thận",
     description: "Sản phẩm được đóng gói kỹ lưỡng tại nhà, đảm bảo chất lượng và độ tươi ngon từ tay người làm đến tay người tiêu dùng. Mỗi gói yến đều được kiểm tra cẩn thận trước khi giao hàng.",
-    icon: "📦",
+    image: "/ntcb_4.png",
   },
 ]
 
@@ -47,7 +48,7 @@ export default function ProcessStory() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
             Nghệ Thuật Chế Biến
           </h2>
-          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed text-justify">
             Mỗi bước trong quy trình đều được thực hiện với sự tỉ mỉ và tâm huyết, 
             đảm bảo từng sợi yến giữ nguyên giá trị dinh dưỡng quý giá.
           </p>
@@ -66,15 +67,21 @@ export default function ProcessStory() {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="text-5xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
-                    {item.icon}
+                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 aspect-square mx-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
                   </div>
                   
                   <div className="space-y-3">
                     <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-foreground/80 dark:text-foreground/70 leading-relaxed group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                    <p className="text-sm text-foreground/80 dark:text-foreground/70 leading-relaxed text-justify group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
                       {item.description}
                     </p>
                   </div>
@@ -84,11 +91,6 @@ export default function ProcessStory() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Connection Line */}
-        <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/30 to-transparent -translate-y-1/2 pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(212,165,116,0.3)_25%,rgba(212,165,116,0.5)_50%,rgba(212,165,116,0.3)_75%,transparent_100%)] animate-shimmer"></div>
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@ const contactItems: ContactItem[] = [
     id: "facebook",
     label: "Facebook Yến Tâm",
     href: "https://www.facebook.com/profile.php?id=100069772802576",
-    icon: <Facebook className="h-5 w-5" />,
+    icon: <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />,
     gradient: "from-primary via-primary/90 to-primary",
     glow: "bg-primary/35",
     secondaryGlow: "bg-primary/25",
@@ -29,7 +29,7 @@ const contactItems: ContactItem[] = [
     label: "Zalo Official",
     href: "https://zalo.me/0938697977",
     icon: (
-      <span className="text-xs font-semibold tracking-wide">Zalo</span>
+      <span className="text-[10px] sm:text-xs font-semibold tracking-wide">Zalo</span>
     ),
     gradient: "from-primary/90 via-primary to-primary/80",
     glow: "bg-primary/30",
@@ -40,7 +40,7 @@ const contactItems: ContactItem[] = [
     id: "phone",
     label: "Hotline tư vấn",
     href: "tel:+84938697977",
-    icon: <Phone className="h-5 w-5" />,
+    icon: <Phone className="h-4 w-4 sm:h-5 sm:w-5" />,
     gradient: "from-accent via-accent/90 to-accent/80",
     glow: "bg-accent/35",
     secondaryGlow: "bg-accent/25",
@@ -50,7 +50,7 @@ const contactItems: ContactItem[] = [
 
 export default function FloatingContactBar() {
   return (
-    <div className="fixed right-6 top-1/2 z-[60] hidden -translate-y-1/2 flex-col items-center gap-5 md:flex">
+    <div className="fixed right-3 sm:right-6 top-1/2 z-[60] -translate-y-1/2 flex-col items-center gap-3 sm:gap-5 flex">
       {contactItems.map(item => {
         const isExternal = item.href.startsWith("http")
 
@@ -68,7 +68,7 @@ export default function FloatingContactBar() {
               {...(isExternal && item.id !== "phone"
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className={`relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${item.gradient} text-white shadow-[0_18px_35px_-18px_rgba(0,0,0,0.8)] transition-all duration-500 hover:scale-110 hover:shadow-[0_28px_45px_-18px_rgba(0,0,0,0.7)]`}
+              className={`relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-br ${item.gradient} text-white shadow-[0_18px_35px_-18px_rgba(0,0,0,0.8)] transition-all duration-500 hover:scale-110 hover:shadow-[0_28px_45px_-18px_rgba(0,0,0,0.7)]`}
             >
               <span className="sr-only">{item.label}</span>
               <span className="pointer-events-none select-none text-white drop-shadow-sm">

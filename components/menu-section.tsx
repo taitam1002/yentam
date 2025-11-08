@@ -119,7 +119,7 @@ export default function MenuSection() {
             Thực Đơn
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-4">Yến Chưng Tươi</h2>
-          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto text-justify">
             Vị ngon từ thiên nhiên, sức khỏe cho gia đình bạn
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function MenuSection() {
                   <div className="flex-1">
                     <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
                     <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80 dark:text-foreground/70">{product.description}</p>
+                    <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
@@ -193,7 +193,7 @@ export default function MenuSection() {
                   <div className="flex-1">
                     <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
                     <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80 dark:text-foreground/70">{product.description}</p>
+                    <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
@@ -251,12 +251,12 @@ export default function MenuSection() {
                 )}
                 <h4 className="font-bold text-lg text-primary dark:text-accent mb-4">{combo.title}</h4>
                 {combo.title === "Combo Dùng Trong Tuần" ? (
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed flex-grow">
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed text-justify flex-grow">
                     Mua 10 hũ Yến chưng Bồi bổ Hằng ngày (75ml),{" "}
                     <span className="font-bold text-accent text-base">tặng 1 hũ cùng loại</span> 
                   </p>
                 ) : (
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed flex-grow">{combo.content}</p>
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed text-justify flex-grow">{combo.content}</p>
                 )}
                 <div className="pt-4 border-t border-accent/20 mt-auto">
                   {combo.originalPrice ? (

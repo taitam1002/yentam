@@ -18,11 +18,6 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-slide-left flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur animate-fade-in">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-              Câu Chuyện Bắt Đầu
-            </div>
-
             <div className="space-y-4">
               <p className="text-primary dark:text-accent font-semibold text-lg animate-fade-in" style={{ animationDelay: "0.1s" }}>
                 Chào mừng đến với
@@ -39,12 +34,12 @@ export default function Hero() {
             </div>
 
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <p className="text-lg text-foreground/90 dark:text-foreground/80 text-balance leading-relaxed">
+              <p className="text-lg text-foreground/90 dark:text-foreground/80 text-balance leading-relaxed text-justify">
                 Trong hành trình tìm kiếm những giá trị thuần khiết từ thiên nhiên, 
                 chúng tôi đã khám phá ra vẻ đẹp và sức mạnh của yến sào - món quà quý giá 
                 mà thiên nhiên ban tặng.
               </p>
-              <p className="text-base text-foreground/80 dark:text-foreground/70 leading-relaxed">
+              <p className="text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed text-justify">
                 Từ những hang đá tự nhiên tại <span className="font-semibold text-primary dark:text-accent">Bình Phước</span>, 
                 đến bàn tay bạn, mỗi sợi yến đều mang trong mình một câu chuyện về sự tận tâm, 
                 chất lượng và niềm tin.

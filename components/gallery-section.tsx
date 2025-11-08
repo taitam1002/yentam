@@ -56,7 +56,7 @@ export default function GallerySection() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
             Dòng Sản Phẩm
           </h2>
-          <p className="text-lg md:text-xl text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground/90 dark:text-foreground/80 max-w-3xl mx-auto leading-relaxed text-justify">
             Khám phá bộ sưu tập yến sào đa dạng, được tuyển chọn kỹ lưỡng từ những tổ yến chất lượng cao nhất, 
             phù hợp với mọi nhu cầu và ngân sách của bạn.
           </p>
@@ -95,7 +95,7 @@ export default function GallerySection() {
                   <h3 className="text-xl md:text-2xl font-bold text-primary dark:text-accent group-hover:text-accent transition-colors duration-300 mb-3">
                     {product.title}
                   </h3>
-                  <p className="text-sm md:text-base text-foreground/80 dark:text-foreground/70 leading-relaxed group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                  <p className="text-sm md:text-base text-foreground/80 dark:text-foreground/70 leading-relaxed text-justify group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
                     {product.description}
                   </p>
                 </div>

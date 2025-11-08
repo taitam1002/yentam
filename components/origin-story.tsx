@@ -41,13 +41,13 @@ export default function OriginStory() {
             </h2>
 
             <div className="space-y-6 text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed">
-              <p>
+              <p className="text-justify">
                 Hành trình của Yến Tâm bắt đầu từ những hang đá tự nhiên tại <span className="font-semibold text-primary dark:text-accent">Bình Phước</span> - vùng đất được thiên nhiên ưu ái với khí hậu lý tưởng cho loài yến sinh trưởng.
               </p>
-              <p>
+              <p className="text-justify">
                 Tại đây, từng tổ yến được hình thành bởi những con chim yến thuần khiết, sống trong môi trường hoàn toàn tự nhiên, không có sự can thiệp của con người. Mỗi sợi yến là kết tinh của nước bọt giàu dinh dưỡng, được tạo nên qua hàng trăm giờ bay lượn và kiếm ăn.
               </p>
-              <p className="font-semibold text-primary dark:text-primary">
+              <p className="font-semibold text-primary dark:text-primary text-justify">
                 Chúng tôi tin rằng, chỉ có nguồn nguyên liệu thuần khiết nhất mới tạo nên những sản phẩm giá trị nhất.
               </p>
             </div>

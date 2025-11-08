@@ -82,7 +82,7 @@ export default function BenefitsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
             Lợi Ích Nổi Bật
           </h2>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed text-justify">
             Yến sào Yến Tâm không chỉ là một món ăn bổ dưỡng, mà còn là giải pháp toàn diện 
             cho sức khỏe và sắc đẹp của bạn. Mỗi sợi yến đều chứa đựng những giá trị dinh dưỡng 
             quý giá được thiên nhiên ban tặng.
@@ -117,7 +117,7 @@ export default function BenefitsSection() {
                     <h3 className="text-2xl md:text-3xl font-bold text-primary group-hover:text-accent transition-colors duration-300 mb-2">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm text-foreground/70 group-hover:text-foreground/90 transition-colors duration-300 leading-relaxed">
+                    <p className="text-sm text-foreground/70 text-justify group-hover:text-foreground/90 transition-colors duration-300 leading-relaxed">
                       {benefit.shortDescription}
                     </p>
                   </div>
@@ -125,7 +125,7 @@ export default function BenefitsSection() {
 
                 {/* Detailed description */}
                 <div className="space-y-4 pt-4 border-t border-accent/20">
-                  <p className="text-sm md:text-base text-foreground/80 leading-relaxed group-hover:text-foreground/95 transition-colors duration-300">
+                  <p className="text-sm md:text-base text-foreground/80 leading-relaxed text-justify group-hover:text-foreground/95 transition-colors duration-300">
                     {benefit.detailedDescription}
                   </p>
                 </div>
@@ -151,7 +151,7 @@ export default function BenefitsSection() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <p className="text-lg text-foreground/70 mb-6">
+          <p className="text-lg text-foreground/70 mb-6 text-justify">
             Trải nghiệm ngay những lợi ích tuyệt vời từ yến sào Yến Tâm
           </p>
           <div className="flex flex-wrap justify-center gap-4">

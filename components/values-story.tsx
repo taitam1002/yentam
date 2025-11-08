@@ -46,7 +46,7 @@ export default function ValuesStory() {
               <span className="text-foreground">Chúng Tôi Theo Đuổi</span>
             </h2>
 
-            <p className="text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed">
+            <p className="text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed text-justify">
               Yến Tâm không chỉ là một thương hiệu, mà là một cam kết về chất lượng, 
               sự tận tâm và niềm tin. Chúng tôi tin rằng mỗi sản phẩm phải mang trong mình 
               những giá trị cốt lõi này để thực sự phục vụ tốt nhất cho sức khỏe và sắc đẹp của bạn.
@@ -67,7 +67,7 @@ export default function ValuesStory() {
                       <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
                         {value.title}
                       </h3>
-                      <p className="text-sm text-foreground/80 dark:text-foreground/70 leading-relaxed group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                      <p className="text-sm text-foreground/80 dark:text-foreground/70 leading-relaxed text-justify group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
                         {value.description}
                       </p>
                     </div>
