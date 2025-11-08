@@ -61,7 +61,7 @@ export default function CommitmentStory() {
                   <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
                     {item.label}
                   </h3>
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
+                  <p className="text-sm text-foreground/80 dark:text-foreground/70 text-center group-hover:text-foreground/95 dark:group-hover:text-foreground/90 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>
