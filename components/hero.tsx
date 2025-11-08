@@ -34,15 +34,11 @@ export default function Hero() {
             </div>
 
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <p className="text-lg text-foreground/90 dark:text-foreground/80 text-balance leading-relaxed text-justify">
-                Trong hành trình tìm kiếm những giá trị thuần khiết từ thiên nhiên, 
-                chúng tôi đã khám phá ra vẻ đẹp và sức mạnh của yến sào - món quà quý giá 
-                mà thiên nhiên ban tặng.
+              <p className="text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed text-justify">
+                Trong hành trình tìm kiếm những giá trị thuần khiết từ thiên nhiên, chúng tôi đã khám phá ra vẻ đẹp và sức mạnh của yến sào – món quà quý giá mà thiên nhiên ban tặng.
               </p>
               <p className="text-lg text-foreground/90 dark:text-foreground/80 leading-relaxed text-justify">
-                Từ những hang đá tự nhiên tại <span className="font-semibold text-primary dark:text-accent">Bình Phước</span>, 
-                đến bàn tay bạn, mỗi sợi yến đều mang trong mình một câu chuyện về sự tận tâm, 
-                chất lượng và niềm tin.
+                Từ những hang đá tự nhiên tại <span className="font-semibold text-primary dark:text-accent">Bình Phước</span>, đến bàn tay bạn, mỗi sợi yến đều mang trong mình một câu chuyện về sự tận tâm, chất lượng và niềm tin.
               </p>
             </div>
           </div>

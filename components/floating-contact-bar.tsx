@@ -76,9 +76,9 @@ export default function FloatingContactBar() {
               </span>
             </Link>
 
-            <div className="pointer-events-none absolute right-[110%] top-1/2 hidden -translate-y-1/2 translate-x-2 flex-col items-end gap-1 rounded-2xl border border-white/10 bg-card/80 px-4 py-2 text-right text-xs font-semibold text-foreground opacity-0 shadow-lg backdrop-blur transition-all duration-500 group-hover:flex group-hover:translate-x-0 group-hover:opacity-100">
-              <span className="uppercase tracking-[0.25em] text-foreground/50">{item.description}</span>
-              <span className="text-sm font-semibold text-primary/90">{item.label}</span>
+            <div className="pointer-events-none absolute right-[110%] top-1/2 hidden -translate-y-1/2 translate-x-2 flex-col items-end gap-1 rounded-2xl border border-white/10 bg-card/80 px-4 py-2 text-right text-xs font-semibold text-foreground opacity-0 shadow-lg backdrop-blur transition-all duration-500 group-hover:flex group-hover:translate-x-0 group-hover:opacity-100 whitespace-nowrap">
+              <span className="uppercase tracking-wider text-foreground/50">{item.description}</span>
+              <span className="text-sm font-semibold text-primary/90 whitespace-nowrap">{item.label}</span>
             </div>
           </div>
         )
