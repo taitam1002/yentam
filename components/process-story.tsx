@@ -32,16 +32,12 @@ const processSteps = [
 
 export default function ProcessStory() {
   return (
-    <section className="relative overflow-hidden bg-card/30 py-24 md:py-32">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
-      </div>
+    <section className="relative overflow-hidden bg-background py-24 md:py-32">
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
             Chương 2: Quy Trình
           </div>
@@ -61,18 +57,18 @@ export default function ProcessStory() {
               className="group relative animate-scale-in"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="relative h-full rounded-2xl border-2 border-accent/30 dark:border-accent/20 bg-gradient-to-br from-card/80 via-card/60 to-background/40 p-8 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2">
+              <div className="relative h-full rounded-2xl border-2 border-accent/70 dark:border-accent/60 bg-gradient-to-br from-card/80 via-card/60 to-background/40 p-8 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent/80 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2">
                 <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center text-2xl font-bold text-primary dark:text-accent/80 backdrop-blur">
                   {item.step}
                 </div>
 
                 <div className="space-y-6">
-                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 aspect-square mx-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] aspect-square mx-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                     <Image
                       src={item.image}
                       alt={item.title}
-                      width={160}
-                      height={160}
+                      width={360}
+                      height={360}
                       className="w-full h-full object-cover rounded-lg"
                     />
                   </div>

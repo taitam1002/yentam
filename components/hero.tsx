@@ -4,14 +4,7 @@ import SparkleBackground from "@/components/sparkle-background"
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-background via-background to-card/30 relative overflow-hidden min-h-[90vh] flex items-center">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
+    <section className="pt-32 pb-20 bg-background relative overflow-hidden min-h-[90vh] flex items-center">
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -45,13 +38,13 @@ export default function Hero() {
 
           {/* Right Image */}
           <div className="relative flex justify-center items-center animate-slide-right">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent/50 blur-2xl animate-pulse-glow"></div>
-              <div className="absolute inset-0 rounded-full bg-card flex items-center justify-center overflow-hidden shadow-2xl border-4 border-accent/30 hover:border-accent/60 active:border-accent/60 transition-all duration-300">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 flex-shrink-0">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent/50 animate-pulse-glow"></div>
+              <div className="absolute inset-0 rounded-full bg-card flex items-center justify-center overflow-hidden shadow-2xl border-4 border-accent/60 hover:border-accent/80 active:border-accent/80 transition-all duration-300">
                 <img
                   src="/IMG_6388 copy.jpg"
                   alt="Yến sào Yến Tâm"
-                  className="w-full h-full object-cover hover:scale-110 active:scale-110 transition-transform duration-300"
+                  className="w-[150%] h-[150%] object-cover hover:scale-110 active:scale-110 transition-transform duration-300"
                 />
               </div>
             </div>

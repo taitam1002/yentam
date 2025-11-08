@@ -26,17 +26,13 @@ const values = [
 export default function ValuesStory() {
   return (
     <section className="relative overflow-hidden bg-background py-24 md:py-32">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
-      </div>
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div className="space-y-8 animate-slide-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
               Chương 3: Giá Trị
             </div>
@@ -56,7 +52,7 @@ export default function ValuesStory() {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl border border-accent/30 dark:border-accent/20 bg-gradient-to-br from-card/80 dark:from-card/60 to-background/40 p-6 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 animate-scale-in"
+                  className="group relative rounded-2xl border border-accent/70 dark:border-accent/60 bg-gradient-to-br from-card/80 dark:from-card/60 to-background/40 p-6 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent/80 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-start gap-4">
@@ -80,14 +76,12 @@ export default function ValuesStory() {
           {/* Right - Image */}
           <div className="relative animate-slide-right">
             <div className="relative aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-2xl"></div>
-              <div className="relative rounded-3xl overflow-hidden border-2 border-accent/30 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden border-4 border-accent/60 shadow-2xl">
                 <img
                   src="/2.jpg"
                   alt="Giá trị Yến Tâm"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>

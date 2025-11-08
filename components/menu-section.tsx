@@ -98,28 +98,18 @@ export default function MenuSection() {
   ]
 
   return (
-    <section id="menu" className="py-20 bg-gradient-to-b from-background to-card/30 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "0s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-      </div>
+    <section id="menu" className="pt-24 pb-20 md:pt-32 md:pb-20 bg-gradient-to-b from-background to-card/60 relative overflow-hidden">
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
+        <div className="text-center mb-20 animate-slide-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
             Thực Đơn
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-4">Yến Chưng Tươi</h2>
-          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto text-justify">
+          <p className="text-lg text-foreground/90 dark:text-foreground/80 max-w-2xl mx-auto text-center">
             Vị ngon từ thiên nhiên, sức khỏe cho gia đình bạn
           </p>
         </div>
@@ -134,7 +124,7 @@ export default function MenuSection() {
             {nourishingProducts.map((product, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl border-2 border-accent/30 p-6 hover:border-accent shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up"
+                className="bg-card/95 dark:bg-card/90 rounded-xl border-2 border-accent/70 p-6 hover:border-accent shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex gap-4 mb-4">
@@ -149,18 +139,18 @@ export default function MenuSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
-                    <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify">{product.description}</p>
+                    <p className="text-sm text-foreground/90 dark:text-foreground/80 mb-2">(Hũ {product.size})</p>
+                    <p className="text-sm text-foreground dark:text-foreground/95 text-justify">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
                   {product.options.map((option, optIndex) => (
                     <div
                       key={optIndex}
-                      className="flex justify-between items-center p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
+                      className="flex justify-between items-center p-3 bg-background/80 dark:bg-background/60 rounded-lg border border-transparent hover:border-accent transition-all"
                     >
-                      <span className="text-sm text-foreground/80 dark:text-foreground/90 flex-1">{option.name}</span>
-                      <span className="font-bold text-accent ml-4">{option.price}</span>
+                      <span className="text-sm text-foreground dark:text-foreground/95 flex-1 font-medium">{option.name}</span>
+                      <span className="font-bold text-accent dark:text-accent text-lg ml-4">{option.price}</span>
                     </div>
                   ))}
                 </div>
@@ -177,7 +167,7 @@ export default function MenuSection() {
             {specialProducts.map((product, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl border-2 border-accent/30 p-6 hover:border-accent shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up"
+                className="bg-card/95 dark:bg-card/90 rounded-xl border-2 border-accent/70 p-6 hover:border-accent shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${(index + 2) * 0.1}s` }}
               >
                 <div className="flex gap-4 mb-4">
@@ -192,18 +182,18 @@ export default function MenuSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg text-primary dark:text-accent mb-1">{product.title}</h4>
-                    <p className="text-sm text-foreground/70 dark:text-foreground/60 mb-2">(Hũ {product.size})</p>
-                    <p className="text-sm text-foreground/80 dark:text-foreground/70 text-justify">{product.description}</p>
+                    <p className="text-sm text-foreground/90 dark:text-foreground/80 mb-2">(Hũ {product.size})</p>
+                    <p className="text-sm text-foreground dark:text-foreground/95 text-justify">{product.description}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mt-4">
                   {product.options.map((option, optIndex) => (
                     <div
                       key={optIndex}
-                      className="flex justify-between items-center p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
+                      className="flex justify-between items-center p-3 bg-background/80 dark:bg-background/60 rounded-lg border border-transparent hover:border-accent transition-all"
                     >
-                      <span className="text-sm text-foreground/80 dark:text-foreground/90 flex-1">{option.name}</span>
-                      <span className="font-bold text-accent ml-4">{option.price}</span>
+                      <span className="text-sm text-foreground dark:text-foreground/95 flex-1 font-medium">{option.name}</span>
+                      <span className="font-bold text-accent dark:text-accent text-lg ml-4">{option.price}</span>
                     </div>
                   ))}
                 </div>
@@ -211,14 +201,14 @@ export default function MenuSection() {
             ))}
 
             {/* Các Vị Chưng Kèm */}
-            <div className="bg-card rounded-xl border-2 border-accent/30 p-6 mt-6">
+            <div className="bg-card/95 dark:bg-card/90 rounded-xl border-2 border-accent/70 p-6 mt-6">
               <h4 className="font-bold text-lg text-primary dark:text-accent mb-4">Các Vị Chưng Kèm</h4>
               <div className="flex flex-wrap gap-2">
                 {flavors.map((flavor, index) => (
                   <Badge
                     key={index}
                     variant="outline"
-                    className="px-4 py-2 text-sm border-accent/30 hover:border-accent hover:bg-accent/10 transition-colors cursor-default"
+                    className="px-4 py-2 text-sm bg-background border border-transparent hover:border-accent transition-all cursor-default"
                   >
                     {flavor}
                   </Badge>
@@ -239,7 +229,7 @@ export default function MenuSection() {
             {combos.map((combo, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl border-2 border-accent/30 p-6 relative hover:border-accent active:border-accent shadow-lg hover:shadow-xl active:shadow-xl transition-all duration-300 transform hover:-translate-y-2 active:-translate-y-2 animate-scale-in flex flex-col h-full"
+                className="bg-card/95 dark:bg-card/90 rounded-xl border-2 border-accent/70 p-6 relative hover:border-accent active:border-accent shadow-lg hover:shadow-xl active:shadow-xl transition-all duration-300 transform hover:-translate-y-2 active:-translate-y-2 animate-scale-in flex flex-col h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {combo.hot && (
@@ -251,17 +241,17 @@ export default function MenuSection() {
                 )}
                 <h4 className="font-bold text-lg text-primary dark:text-accent mb-4">{combo.title}</h4>
                 {combo.title === "Combo Dùng Trong Tuần" ? (
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed text-justify flex-grow">
+                  <p className="text-sm text-foreground dark:text-foreground/90 mb-4 leading-relaxed text-justify flex-grow">
                     Mua 10 hũ Yến chưng Bồi bổ Hằng ngày (75ml),{" "}
                     <span className="font-bold text-accent text-base">tặng 1 hũ cùng loại</span> 
                   </p>
                 ) : (
-                  <p className="text-sm text-foreground/80 dark:text-foreground/70 mb-4 leading-relaxed text-justify flex-grow">{combo.content}</p>
+                  <p className="text-sm text-foreground dark:text-foreground/90 mb-4 leading-relaxed text-justify flex-grow">{combo.content}</p>
                 )}
-                <div className="pt-4 border-t border-accent/20 mt-auto">
+                <div className="pt-4 border-t border-accent/60 mt-auto">
                   {combo.originalPrice ? (
                     <>
-                      <p className="text-sm text-foreground/60 dark:text-foreground/50 line-through mb-2">
+                      <p className="text-sm text-foreground/70 dark:text-foreground/60 line-through mb-2">
                         Giá gốc: {combo.originalPrice}
                       </p>
                       <p className="text-2xl font-bold text-accent mb-4">{combo.price}</p>

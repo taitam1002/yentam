@@ -5,10 +5,6 @@ import SparkleBackground from "@/components/sparkle-background"
 export default function OriginStory() {
   return (
     <section className="relative overflow-hidden bg-background py-24 md:py-32">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
-      </div>
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -16,21 +12,19 @@ export default function OriginStory() {
           {/* Left - Image */}
           <div className="relative order-2 lg:order-1 animate-slide-left">
             <div className="relative aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/20 via-primary/10 to-transparent blur-2xl"></div>
-              <div className="relative rounded-3xl overflow-hidden border-2 border-accent/30 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden border-4 border-accent/60 shadow-2xl">
                 <img
                   src="/1.jpg"
                   alt="Nguồn gốc yến sào Bình Phước"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>
 
           {/* Right - Content */}
           <div className="space-y-8 order-1 lg:order-2 animate-slide-right">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
               Chương 1: Nguồn Gốc
             </div>
@@ -53,13 +47,13 @@ export default function OriginStory() {
             </div>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              <div className="flex items-center gap-3 rounded-xl border border-accent/30 dark:border-accent/20 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
+              <div className="flex items-center gap-3 rounded-xl border border-accent/70 dark:border-accent/60 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
                 <div>
                   <p className="text-sm text-foreground/70 dark:text-foreground/60">Nguồn gốc</p>
                   <p className="font-semibold text-primary dark:text-accent">Bình Phước</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 rounded-xl border border-accent/30 dark:border-accent/20 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
+              <div className="flex items-center gap-3 rounded-xl border border-accent/70 dark:border-accent/60 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
                 <div>
                   <p className="text-sm text-foreground/70 dark:text-foreground/60">Chất lượng</p>
                   <p className="font-semibold text-primary dark:text-accent">100% Tự nhiên</p>

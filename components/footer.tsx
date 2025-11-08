@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-background/95 backdrop-blur-lg border-t-2 border-accent/20 py-6 sm:py-8">
+    <footer id="contact" className="bg-background/95 backdrop-blur-lg border-t-2 border-accent/60 py-6 sm:py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 mb-6 sm:mb-4">
           {/* Brand */}

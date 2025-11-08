@@ -10,7 +10,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b-2 border-accent/20 z-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b-2 border-accent/60 z-50 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

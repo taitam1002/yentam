@@ -22,12 +22,6 @@ export default function VideoUploadSection({ videos }: VideoUploadSectionProps) 
 
   return (
     <section id="videos" className="py-20 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -46,7 +40,7 @@ export default function VideoUploadSection({ videos }: VideoUploadSectionProps) 
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-accent/20 border-2 border-accent/30 hover:border-accent transition-all duration-300 animate-scale-in"
+                className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-accent/20 border-2 border-accent/70 hover:border-accent transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {isLocalVideo ? (

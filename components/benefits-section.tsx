@@ -60,22 +60,11 @@ export default function BenefitsSection() {
 
   return (
     <section id="benefits" className="py-24 md:py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "0s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,165,116,0.05),transparent_70%)]"></div>
-      </div>
       <SparkleBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-slide-up">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
             Lợi Ích Vượt Trội
           </div>
@@ -93,7 +82,7 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-3xl border-2 border-accent/30 bg-gradient-to-br from-card/80 via-card/60 to-background/40 backdrop-blur-lg transition-all duration-500 hover:border-accent/60 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 animate-scale-in h-full ${
+              className={`group relative overflow-hidden rounded-3xl border-2 border-accent/70 dark:border-accent/60 bg-card/80 backdrop-blur-lg transition-all duration-500 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 animate-scale-in h-full ${
                 touchedItems.has(index) ? 'scale-[1.02] shadow-2xl shadow-accent/20' : ''
               }`}
               style={{ animationDelay: `${index * 0.15}s` }}
@@ -124,7 +113,7 @@ export default function BenefitsSection() {
                 </div>
 
                 {/* Detailed description */}
-                <div className="space-y-4 pt-4 border-t border-accent/20">
+                <div className="space-y-4 pt-4">
                   <p className="text-sm md:text-base text-foreground/80 leading-relaxed text-justify group-hover:text-foreground/95 transition-colors duration-300">
                     {benefit.detailedDescription}
                   </p>
@@ -135,10 +124,10 @@ export default function BenefitsSection() {
                   {benefit.highlights.map((highlight, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-3 rounded-xl border border-accent/20 bg-background/50 px-4 py-3 backdrop-blur transition-all duration-300 group-hover:border-accent/40 group-hover:bg-accent/5"
+                      className="flex items-center gap-3 rounded-xl bg-background px-4 py-3 transition-all duration-300 group-hover:bg-accent/5"
                     >
                       <span className="flex-shrink-0 w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                      <span className="text-sm font-medium text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                      <span className="text-sm font-medium text-primary dark:text-accent group-hover:text-yellow-800 dark:group-hover:text-yellow-100 transition-colors duration-300">
                         {highlight}
                       </span>
                     </div>
@@ -151,7 +140,7 @@ export default function BenefitsSection() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <p className="text-lg text-foreground/70 mb-6 text-justify">
+          <p className="text-lg text-foreground/70 mb-6">
             Trải nghiệm ngay những lợi ích tuyệt vời từ yến sào Yến Tâm
           </p>
           <div className="flex flex-wrap justify-center gap-4">
