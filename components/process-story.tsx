@@ -37,8 +37,8 @@ export default function ProcessStory() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur mb-6">
-            <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary dark:text-yellow-300 backdrop-blur mb-6">
+            <span className="h-2 w-2 rounded-full bg-primary dark:bg-yellow-300 animate-pulse"></span>
             Chương 2: Quy Trình
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">

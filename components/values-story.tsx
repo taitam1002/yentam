@@ -32,8 +32,8 @@ export default function ValuesStory() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div className="space-y-8 animate-slide-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary dark:text-yellow-300 backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-primary dark:bg-yellow-300 animate-pulse"></span>
               Chương 3: Giá Trị
             </div>
 
@@ -52,7 +52,7 @@ export default function ValuesStory() {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl border border-accent/70 dark:border-accent/60 bg-gradient-to-br from-card/80 dark:from-card/60 to-background/40 p-6 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent/80 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 animate-scale-in"
+                  className="group relative rounded-2xl border-2 border-accent/90 dark:border-accent/80 bg-gradient-to-br from-card/80 dark:from-card/60 to-background/40 p-6 backdrop-blur-lg shadow-sm transition-all duration-500 hover:border-accent hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-start gap-4">

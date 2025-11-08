@@ -24,8 +24,8 @@ export default function OriginStory() {
 
           {/* Right - Content */}
           <div className="space-y-8 order-1 lg:order-2 animate-slide-right">
-            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent dark:text-accent/90 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/80 bg-accent/10 dark:bg-accent/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary dark:text-yellow-300 backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-primary dark:bg-yellow-300 animate-pulse"></span>
               Chương 1: Nguồn Gốc
             </div>
 
@@ -41,19 +41,19 @@ export default function OriginStory() {
               <p className="text-justify">
                 Tại đây, từng tổ yến được hình thành bởi những con chim yến thuần khiết, sống trong môi trường hoàn toàn tự nhiên, không có sự can thiệp của con người. Mỗi sợi yến là kết tinh của nước bọt giàu dinh dưỡng, được tạo nên qua hàng trăm giờ bay lượn và kiếm ăn.
               </p>
-              <p className="font-semibold text-primary dark:text-primary text-justify">
+              <p className="font-semibold text-primary dark:text-accent">
                 Chúng tôi tin rằng, chỉ có nguồn nguyên liệu thuần khiết nhất mới tạo nên những sản phẩm giá trị nhất.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              <div className="flex items-center gap-3 rounded-xl border border-accent/70 dark:border-accent/60 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
+              <div className="flex items-center gap-3 rounded-xl border-2 border-accent/90 dark:border-accent/80 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
                 <div>
                   <p className="text-sm text-foreground/70 dark:text-foreground/60">Nguồn gốc</p>
                   <p className="font-semibold text-primary dark:text-accent">Bình Phước</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 rounded-xl border border-accent/70 dark:border-accent/60 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
+              <div className="flex items-center gap-3 rounded-xl border-2 border-accent/90 dark:border-accent/80 bg-card/80 dark:bg-card/50 px-6 py-4 backdrop-blur shadow-sm">
                 <div>
                   <p className="text-sm text-foreground/70 dark:text-foreground/60">Chất lượng</p>
                   <p className="font-semibold text-primary dark:text-accent">100% Tự nhiên</p>
